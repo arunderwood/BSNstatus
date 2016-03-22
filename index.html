@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customers</title>
+
+<script src="http://www.w3schools.com/appml/2.0.2/appml.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="css/W3CSScustomstyles.css">
+
+<body>
+
+    <div class="w3-container w3-white w3-xlarge w3-center">
+        <header>Site Monitor</header>
+    </div>
+
+
+    <!This is the template for the card>
+    <div class="w3-row-padding" appml-data="BSNrecords.js">
+        <div class="w3-third" appml-repeat="records">
+            <a href="{{SiteLocator}}" target="_blank">
+                <div class="w3-card-4 w3-margin-16 w3-white">
+                    <header class="w3-container w3-orange w3-row">
+
+                        <h3 class="w3-col" style="width:90%">{{SiteName}}</h3>
+                        <img src="images/sitelogos/{{SiteIcon}}" alt="{{SiteIcon}}" class="w3-padding-8 w3-col" style="width:10%">
+                    </header>
+                    <header class="w3-container w3-purple BSNdescription">
+                        {{SiteDescription}}
+                    </header>
+                    <section class="w3-container w3-input-group w3-center">
+                        <p>{{SiteURL}}</p>
+
+                    </section>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function myFormController($appml) {
+            if ($appml.message == "ready") {
+                return -1;
+            }
+            if ($appml.message == "loaded") {
+                document.getElementById("Form01").style.display = "";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

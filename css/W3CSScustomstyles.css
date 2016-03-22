@@ -1,0 +1,34 @@
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a::hover {
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+div.card70 {
+    max-width: 1000px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-right: 15%;
+    margin-left: 15%
+}
+.BSNdescription {
+    font-style: italic;
+    text-align: center
+}
+
+/*body {
+    background-color: #dfe3ee;
+     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgoJPGRlZnM+CgkJPHBhdHRlcm4gaWQ9J3RpbGUnIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIHdpZHRoPSc3NScgaGVpZ2h0PSc3NScgdmlld0JveD0nMCAwIDUwIDUwJz4KCQkJPGxpbmUgeDE9JzEnIHkxPScwJyB4Mj0nNTEnIHkyPSc1MCcgc3Ryb2tlPScjNGI1YjljJyBzdHJva2Utd2lkdGg9JzInLz4KCQkJPGxpbmUgeDE9JzQ5JyB5MT0nMCcgeDI9Jy0xJyB5Mj0nNTAnIHN0cm9rZT0nIzRiNWI5Yycgc3Ryb2tlLXdpZHRoPScyJy8+CgkJCTxsaW5lIHgxPSc1MCcgeTE9JzAnIHgyPScwJyB5Mj0nNTAnIHN0cm9rZT0nIzg0ODY5NCcgc3Ryb2tlLXdpZHRoPScyJy8+CgkJCTxsaW5lIHgxPScwJyB5MT0nMCcgeDI9JzUwJyB5Mj0nNTAnIHN0cm9rZT0nIzg0ODY5NCcgc3Ryb2tlLXdpZHRoPScyJy8+CgkJPC9wYXR0ZXJuPgoJCTxyYWRpYWxHcmFkaWVudCBpZD0nbCcgY3g9JzUwJScgY3k9JzIwMCUnIGZ5PScwJyByPScyMDElJz4KCQkJPHN0b3Agb2Zmc2V0PScwJScgc3R5bGU9J3N0b3AtY29sb3I6I2ZmZjsgc3RvcC1vcGFjaXR5Oi4xOycgLz4KCQkJPHN0b3Agb2Zmc2V0PScxMCUnIHN0eWxlPSdzdG9wLWNvbG9yOiMwMDA7IHN0b3Atb3BhY2l0eTowLjE7JyAvPgoJCQk8c3RvcCBvZmZzZXQ9JzMwJScgc3R5bGU9J3N0b3AtY29sb3I6IzAwMDsgc3RvcC1vcGFjaXR5OjAuMzsnIC8+CgkJCTxzdG9wIG9mZnNldD0nOTAlJyBzdHlsZT0nc3RvcC1jb2xvcjojMDAwOyBzdG9wLW9wYWNpdHk6MC41NTsnIC8+CgkJCTxzdG9wIG9mZnNldD0nMTAwJScgc3R5bGU9J3N0b3AtY29sb3I6IzAwMDsgc3RvcC1vcGFjaXR5Oi42JyAvPgoJCTwvcmFkaWFsR3JhZGllbnQ+Cgk8L2RlZnM+Cgk8cmVjdCBmaWxsPScjZGZlM2VlJyB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJy8+Cgk8cmVjdCBmaWxsPSd1cmwoI3RpbGUpJyB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJy8+Cgk8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd1cmwoI2wpJy8+Cjwvc3ZnPg==);
+}*/
+
+.BSNnobackground {
+    background-image: none;
+}
+.squareimage {
+    height: auto;
+    overflow: hidden;
+    float: center
+}
