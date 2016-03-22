@@ -43,6 +43,12 @@
             "SiteIcon": "superhot.png",
             "SiteLocator": "https://superhotgame.com",
             "SiteURL": "Superhotgame.com"
+        }, {
+            "SiteName": "Ames Weather",
+            "SiteDescription": "Ames local forecast",
+            "SiteIcon": "weather.png",
+            "SiteLocator": "forecast.io",
+            "SiteURL": "<div id=\"weather\"></div>"
         }
 ]
 }

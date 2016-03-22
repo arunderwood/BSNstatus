@@ -5,6 +5,8 @@
 
 <script src="http://www.w3schools.com/appml/2.0.2/appml.js"></script>
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="scripts/jquery.simpleWeather/jquery.simpleWeather.js"></script>
+<script src="scripts/bsnWeather.js"></script>
 
 
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -18,7 +20,7 @@
 
 
     <!This is the template for the card>
-    <div class="w3-row-padding" appml-data="BSNrecords.js">
+    <div class="w3-row-padding" appml-data="BSNrecords.js" appml-controller="myFormController">
         <div class="w3-third" appml-repeat="records">
             <a href="{{SiteLocator}}" target="_blank">
                 <div class="w3-card-4 w3-margin-16 w3-white">
@@ -41,11 +43,10 @@
 
     <script>
         function myFormController($appml) {
-            if ($appml.message == "ready") {
-                return -1;
-            }
-            if ($appml.message == "loaded") {
-                document.getElementById("Form01").style.display = "";
+            if ($appml.message == "ready") {}
+            if ($appml.message == "loaded") {}
+            if ($appml.message == "done") {
+                dosimpleWeather();
             }
         }
 
