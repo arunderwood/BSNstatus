@@ -16,13 +16,13 @@
 <body>
 
     <div class="w3-container w3-white w3-xlarge w3-center">
-        <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn">BSNstatus</button>
+        <button onclick="document.getElementById('aboutBSN').style.display='block'" class="w3-btn">BSNstatus</button>
     </div>
 
-    <div id="id01" class="w3-modal">
+    <div id="aboutBSN" class="w3-modal">
         <div class="w3-modal-content w3-card-8">
             <header class="w3-container w3-teal">
-                <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">×</span>
+                <span onclick="document.getElementById('aboutBSN').style.display='none'" class="w3-closebtn">×</span>
                 <h2>Modal Header</h2>
             </header>
             <div class="w3-container">
@@ -71,7 +71,7 @@
 
     <script>
         // Get the modal
-        var modal = document.getElementById('id01');
+        var modal = document.getElementById('aboutBSN');
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
