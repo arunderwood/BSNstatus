@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Customers</title>
+<title>BSNStatus</title>
 
+<!-- Javascript includes -->
 <script src="http://www.w3schools.com/appml/2.0.2/appml.js"></script>
 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="scripts/jquery.simpleWeather/jquery.simpleWeather.js"></script>
@@ -10,14 +11,17 @@
 <script src="scripts/bsnStatus.js"></script>
 
 
+<!--CSS Includes -->
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
 <link rel="stylesheet" href="css/W3CSScustomstyles.css">
 
+<!--Favicon Include -->
 <link rel="icon" href="images/favicon.png">
 
 <body>
 
+    <!--TAbout BSNStatus button -->
     <div class="w3-container w3-white w3-xlarge w3-center">
         <button onclick="document.getElementById('aboutBSN').style.display='block'" class="w3-btn">BSNstatus</button>
     </div>
@@ -33,7 +37,6 @@
                 <p>The code and commit history can be found on Github.</p>
                 <a class="github-fork-ribbon" href="https://github.com/arunderwood/BSNstatus" target="_blank" title="Fork me on GitHub">Fork me on GitHub</a>
             </div>
-
             <footer class="w3-container w3-grey">
                 <h3>Designed by me.</h3>
             </footer>
@@ -73,13 +76,10 @@
             }
         }
 
-    </script>
-
-    <script>
-        // Get the modal
+        // Get the modal for the about button
         var modal = document.getElementById('aboutBSN');
 
-        // When the user clicks anywhere outside of the modal, close it
+        // When the user clicks anywhere outside of the aboutBSN modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
