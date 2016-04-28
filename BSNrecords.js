@@ -2,7 +2,7 @@
     "records": [
         {
             "SiteName": "Bizzaro Router",
-            "SiteDescription": "The central router and switch",
+            "SiteDescription": "Central Router",
             "SiteIcon": "router.png",
             "SiteLocator": "http://192.168.100.1",
             "SiteURL": "http://192.168.100.1"
