@@ -14,6 +14,7 @@
 <!--CSS Includes -->
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="css/W3CSScustomstyles.css">
 
 <!--Favicon Include -->
@@ -22,33 +23,48 @@
 <body>
 
     <!--About BSNStatus button-->
-    <div class="w3-container w3-white w3-xlarge w3-center">
-        <button onclick="document.getElementById('aboutBSN').style.display='block'" class="w3-btn">BSNstatus</button>
+    <div class="w3-container w3-deep-orange w3-xlarge w3-center">
+        <button onclick="document.getElementById('aboutBSN').style.display='block'" class="w3-btn">BSNstatus<i class="material-icons">help_outline</i></button>
     </div>
 
     <div id="aboutBSN" class="w3-modal">
         <div class="w3-modal-content w3-card-8">
             <header class="w3-container w3-orange">
                 <span onclick="document.getElementById('aboutBSN').style.display='none'" class="w3-closebtn">×</span>
-                <h2>About BSNstatus</h2>
+                <h2 style="w3-center">About BSNstatus</h2>
             </header>
 
             <div class="w3-container w3-center">
                 <p>This site is open source.</p>
                 <p>The code and commit history can be found on Github.</p>
 
+                <div class="w3-container w3-padding-16">
+
+                    <ul class="w3-ul w3-card-4 w3-center">
+
+                        <h3 class="w3-btn-block w3-cyan w3-block">This site borrows code from the following projects <i class="material-icons">touch_app</i></h3>
+
+                        <li class="w3-hover-text-blue w3-text-teal"><a href="http://www.w3schools.com/appml/" target="_blank">AppML</a> </li>
+                        <li class="w3-hover-text-blue w3-text-teal"><a href="https://jquery.com/" target="_blank">jquery</a> </li>
+                        <li class="w3-hover-text-blue w3-text-teal"><a href="http://simpleweatherjs.com/" target="_blank">SimpleWeather</a> </li>
+                        <li class="w3-hover-text-blue w3-text-teal"><a href="http://www.w3schools.com/w3css/" target="_blank">W3CSS</a> </li>
+                        <li class="w3-hover-text-blue w3-text-teal"><a href="https://github.com/blog/273-github-ribbons" target="_blank">Github Ribbons</a> </li>
+                    </ul>
+                </div>
+
                 <!--This is my <form>.  I know it's not actually a form, but I'd rather use JS in this instance.-->
-                <div class="w3-container w3-padding w3-center w3-card-4 w3-margin-16 w3-white">
-                    <label>Tyle a color to update background of the site</label>
-                    <input id="inputColor" class="w3-input w3-round" autofocus="autofocus" type="text">
+                <div class="w3-container w3-padding w3-center w3-card-4 w3-margin-16 w3-purple">
+                    <label>
+                        <h4>Type a color to update background of the site</h4></label>
+                    <input id="inputColor" class="w3-text-green w3-input w3-round" autofocus="autofocus" type="text">
                     <br>
-                    <button id="btnColor" class="w3-btn" onclick="loadColorpicker();">Change Color</button>
+                    <button id="btnColor" class="w3-btn w3-indigo" onclick="loadColorpicker();">Change Color</button>
                 </div>
 
                 <a class="github-fork-ribbon" href="https://github.com/arunderwood/BSNstatus" target="_blank" title="Fork me on GitHub">Fork me on GitHub</a>
             </div>
 
-            <footer class="w3-container w3-grey">
+            <footer class="w3-container w3-dark-grey">
                 <h3>Designed by Arunderwood.</h3>
             </footer>
         </div>
@@ -65,10 +81,10 @@
                         <h3 class="w3-col" style="width:90%">{{SiteName}}</h3>
                         <img src="images/sitelogos/{{SiteIcon}}" alt="{{SiteIcon}}" class="w3-padding-8 w3-col" style="width:10%">
                     </header>
-                    <header class="w3-container w3-purple BSNdescription">
+                    <header class="w3-container w3-purple w3-large BSNdescription">
                         {{SiteDescription}}
                     </header>
-                    <section class="w3-container w3-input-group w3-center">
+                    <section class="w3-container w3-input-group w3-bold w3-center">
                         <p>{{SiteURL}}</p>
 
                     </section>

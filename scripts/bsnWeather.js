@@ -4,7 +4,7 @@ function dosimpleWeather() {
         woeid: '',
         unit: 'f',
         success: function (weather) {
-            html = '<p>' + weather.temp + '&deg;' + weather.units.temp + '</p>';
+            html = '<p><b>' + weather.temp + '&deg;' + weather.units.temp + '</b></p>';
 
             $("#weather").html(html);
         },
