@@ -7,42 +7,30 @@
             "SiteLocator": "http://192.168.100.1",
             "SiteURL": "http://192.168.100.1"
         }, {
-            "SiteName": "Google",
-            "SiteDescription": "Search Engine",
-            "SiteIcon": "google.png",
-            "SiteLocator": "https://www.google.com",
-            "SiteURL": "www.google.com"
+            "SiteName": "Plex",
+            "SiteDescription": "Media Server",
+            "SiteIcon": "plex.png",
+            "SiteLocator": "http://astraeus:32400/web/index.html",
+            "SiteURL": "astraeus:32400/web/index.html"
         },
         {
-            "SiteName": "Facebook",
-            "SiteDescription": "Social Media",
-            "SiteIcon": "facebook.png",
-            "SiteLocator": "https://facebook.com",
-            "SiteURL": "Facebook.com"
+            "SiteName": "SABnzbd",
+            "SiteDescription": "Binary Newsreader",
+            "SiteIcon": "SABnzbd.png",
+            "SiteLocator": "http://astraeus:6969",
+            "SiteURL": "astraeus:6969"
         }, {
-            "SiteName": "ESPN",
-            "SiteDescription": "Sports",
-            "SiteIcon": "espn.png",
-            "SiteLocator": "http://espn.com",
-            "SiteURL": "ESPN.com"
+            "SiteName": "Sickbeard",
+            "SiteDescription": "TV PVR",
+            "SiteIcon": "sickbeard.png",
+            "SiteLocator": "http://astraeus:6970/home/",
+            "SiteURL": "astraeus:6970"
         }, {
-            "SiteName": "Github",
-            "SiteDescription": "Source Control",
-            "SiteIcon": "github.png",
-            "SiteLocator": "https://github.com",
-            "SiteURL": "Github.com"
-        }, {
-            "SiteName": "Brackets",
-            "SiteDescription": "Modern Text editor",
-            "SiteIcon": "brackets.png",
-            "SiteLocator": "http://brackets.io/",
-            "SiteURL": "Brackets.io"
-        }, {
-            "SiteName": "SUPER. HOT.",
-            "SiteDescription": "SUPER...HOT!",
-            "SiteIcon": "superhot.png",
-            "SiteLocator": "https://superhotgame.com",
-            "SiteURL": "Superhotgame.com"
+            "SiteName": "CouchPotato",
+            "SiteDescription": "Movie PVR",
+            "SiteIcon": "couchpotato.png",
+            "SiteLocator": "http://astraeus:6970/home/",
+            "SiteURL": "astraeus:6970"
         }, {
             "SiteName": "Ames Weather",
             "SiteDescription": "Ames local forecast",
