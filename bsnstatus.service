@@ -5,7 +5,7 @@ After=docker.service
 
 [Service]
 Restart=always
-ExecStart=/usr/bin/docker run -d --name bsnstatus_server arunderwood/bsnstatus
+ExecStart=/usr/bin/docker run -p 80:80 --name bsnstatus_server arunderwood/bsnstatus
 ExecStop=/usr/bin/docker stop -t 2 bsnstatus_server
 ExecStopPost=/usr/bin/docker rm -f bsnstatus_server
 

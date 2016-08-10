@@ -29,8 +29,8 @@
             "SiteName": "CouchPotato",
             "SiteDescription": "Movie PVR",
             "SiteIcon": "couchpotato.png",
-            "SiteLocator": "http://astraeus:6970/home/",
-            "SiteURL": "astraeus:6970"
+            "SiteLocator": "http://astraeus:6971/home/",
+            "SiteURL": "astraeus:6971"
         }, {
             "SiteName": "Ames Weather",
             "SiteDescription": "Ames local forecast",
