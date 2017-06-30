@@ -20,11 +20,11 @@
             "SiteLocator": "http://astraeus:6969",
             "SiteURL": "astraeus:6969"
         }, {
-            "SiteName": "Sickbeard",
+            "SiteName": "SickRage",
             "SiteDescription": "TV PVR",
-            "SiteIcon": "sickbeard.png",
-            "SiteLocator": "http://astraeus:6970/home/",
-            "SiteURL": "astraeus:6970"
+            "SiteIcon": "sickrage.png",
+            "SiteLocator": "http://astraeus:8081/home/",
+            "SiteURL": "astraeus:8081"
         }, {
             "SiteName": "CouchPotato",
             "SiteDescription": "Movie PVR",
