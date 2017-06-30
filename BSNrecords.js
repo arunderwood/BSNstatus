@@ -1,11 +1,11 @@
 {
     "records": [
         {
-            "SiteName": "Bizzaro Router",
-            "SiteDescription": "Central Router",
+            "SiteName": "BizzaroRouter",
+            "SiteDescription": "Firewall",
             "SiteIcon": "router.png",
-            "SiteLocator": "http://192.168.100.1",
-            "SiteURL": "http://192.168.100.1"
+            "SiteLocator": "https://192.168.100.1:8080",
+            "SiteURL": "192.168.100.1:8080"
         }, {
             "SiteName": "Plex",
             "SiteDescription": "Media Server",
