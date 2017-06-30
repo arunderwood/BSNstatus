@@ -20,6 +20,7 @@ Availible on [Docker Hub](https://hub.docker.com/r/arunderwood/bsnstatus/).
 docker pull arunderwood/bsnstatus
 wget https://raw.githubusercontent.com/arunderwood/BSNstatus/master/bsnstatus.service
 sudo cp bsnstatus.service /etc/systemd/system/
+sudo systemctl enable bsnstatus
 sudo service bsnstatus start
 ```
 
