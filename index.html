@@ -5,18 +5,39 @@
 
 <!-- Javascript includes -->
 <script src="https://www.w3schools.com/appml/2.0.3/appml.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+if (typeof appml === 'undefined') {
+    document.write(unescape("%3Cscript src='scripts/appml.js' type='text/javascript'%3E%3C/script%3E"));
+}
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+if (typeof jQuery === 'undefined') {
+    document.write(unescape("%3Cscript src='scripts/jquery-3.2.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+}
+</script>
 <script src="scripts/jquery.simpleWeather/jquery.simpleWeather.js"></script>
 <script src="scripts/bsnWeather.js"></script>
 <script src="scripts/bsnStatus.js"></script>
 
 
 <!--CSS Includes -->
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link href="css/w3.css" rel="alternate stylesheet" type="text/css" title="Offline CSS">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" onerror="loadCSSBackup('css/w3.css')">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" onerror="loadCSSBackup('css/gh-fork-ribbon.min.css')">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" onerror="loadCSSBackup('css/materialIcons.css')">
 <link rel="stylesheet" href="css/W3CSScustomstyles.css">
+
+<!--Load CSS if Offline -->
+<script type="text/javascript">
+    function loadCSSBackup(localURL) {
+        var css = document.createElement("link")
+        css.setAttribute("rel", "stylesheet");
+        css.setAttribute("type", "text/css");
+        css.setAttribute("href", localURL);
+        document.getElementsByTagName("head")[0].appendChild(css);
+    }
+</script>
+
 <!--Favicon Include -->
 <link rel="icon" href="images/favicon.png">
 
