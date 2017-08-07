@@ -31,6 +31,12 @@
             "SiteIcon": "couchpotato.png",
             "SiteLocator": "http://astraeus:6971/home/",
             "SiteURL": "astraeus:6971"
+        },{
+            "SiteName": "RuTorrent",
+            "SiteDescription": "Torrent Client",
+            "SiteIcon": "rutorrent.png",
+            "SiteLocator": "http://astraeus:6973",
+            "SiteURL": "astraeus:6973"
         }, {
             "SiteName": "Ames Weather",
             "SiteDescription": "Ames local forecast",
