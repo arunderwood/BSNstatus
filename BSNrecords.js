@@ -6,7 +6,13 @@
             "SiteIcon": "router.png",
             "SiteLocator": "https://192.168.100.1:8080",
             "SiteURL": "192.168.100.1:8080"
-        }, {
+        },{
+            "SiteName": "Webmin",
+            "SiteDescription": "System Administration",
+            "SiteIcon": "webmin.png",
+            "SiteLocator": "https://astraeus:10000",
+            "SiteURL": "astraeus:10000"
+        },{
             "SiteName": "Plex",
             "SiteDescription": "Media Server",
             "SiteIcon": "plex.png",
