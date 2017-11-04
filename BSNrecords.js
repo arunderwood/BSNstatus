@@ -43,7 +43,13 @@
             "SiteIcon": "rutorrent.png",
             "SiteLocator": "http://astraeus:6973",
             "SiteURL": "astraeus:6973"
-        }, {
+        },{
+            "SiteName": "Home-Assistant",
+            "SiteDescription": "Home Automation",
+            "SiteIcon": "homeassistant.png",
+            "SiteLocator": "http://astraeus:8123",
+            "SiteURL": "astraeus:8123"
+        },{
             "SiteName": "Ames Weather",
             "SiteDescription": "Ames local forecast",
             "SiteIcon": "weather.png",
