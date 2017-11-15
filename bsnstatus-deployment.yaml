@@ -1,0 +1,17 @@
+---
+ apiVersion: extensions/v1beta1
+ kind: Deployment
+ metadata:
+   name: bsnstatus
+ spec:
+   replicas: 3
+   template:
+     metadata:
+       labels:
+         app: web
+     spec:
+       containers:
+         - name: bsnstatus
+           image: arunderwood/bsnstatus
+           ports:
+             - containerPort: 80
