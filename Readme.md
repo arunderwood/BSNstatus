@@ -39,15 +39,14 @@ kubectl create -f bsnstatus-deployment.yaml
 kubectl expose deployment bsnstatus --type=NodePort --name=bsnstatus-service
 ```
 
-Get the ClusterIP from the `cluster-info` command and the `NodePort` from the service description:
+Get the Ingress address:
 ```
-kubectl cluster-info
-kubectl describe services bsnstatus-service
+kubectl get ingress bsnstatus-ingress
 ```
 
 Combine them to get the exposed URL for the service:
 
-_http://CLUSTERIP:NODEPORT_
+_http://INGRESSADDRESS:80_
 
 ## Local Development
 These commands allow the container to be built and executed locally.
