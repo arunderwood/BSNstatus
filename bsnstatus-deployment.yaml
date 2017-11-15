@@ -1,17 +1,41 @@
 ---
- apiVersion: extensions/v1beta1
- kind: Deployment
- metadata:
-   name: bsnstatus
- spec:
-   replicas: 3
-   template:
-     metadata:
-       labels:
-         app: web
-     spec:
-       containers:
-         - name: bsnstatus
-           image: arunderwood/bsnstatus
-           ports:
-             - containerPort: 80
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: bsnstatus
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: bsnstatus
+    spec:
+      containers:
+      - name: bsnstatus
+        image: arunderwood/bsnstatus:v1.1
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bsnstatus
+spec:
+  selector:
+    app: bsnstatus
+  ports:
+  - protocol: "TCP"
+    port: 80
+    targetPort: 80
+  type: LoadBalancer
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: bsnstatus-ingress
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  backend:
+    serviceName: bsnstatus
+    servicePort: 80
