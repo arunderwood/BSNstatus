@@ -24,6 +24,25 @@ sudo systemctl enable bsnstatus
 sudo service bsnstatus start
 ```
 
+### Running in Kubernetes
+
+Launch the deployment and expose it:
+
+```
+kubectl create -f bsnstatus-deployment.yaml
+kubectl expose deployment bsnstatus --type=NodePort --name=bsnstatus-service
+```
+
+Get the ClusterIP from the `cluster-info` command and the `NodePort` from the service description:
+```
+kubectl cluster-info
+kubectl describe services bsnstatus-service
+```
+
+Combine them to get the exposed URL for the service:
+
+_http://CLUSTERIP:NODEPORT_
+
 ## Local Development
 These commands allow the container to be built and executed locally.
 ```
