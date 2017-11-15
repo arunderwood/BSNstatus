@@ -24,6 +24,30 @@ sudo systemctl enable bsnstatus
 sudo service bsnstatus start
 ```
 
+### Running in Kubernetes
+
+If you are running in minikube, you will need to enable ingress and stop/start minikube before continuing.
+
+```
+minikube addons enable ingress
+```
+
+Launch the deployment and expose it:
+
+```
+kubectl create -f bsnstatus-deployment.yaml
+kubectl expose deployment bsnstatus --type=NodePort --name=bsnstatus-service
+```
+
+Get the Ingress address:
+```
+kubectl get ingress bsnstatus-ingress
+```
+
+Combine them to get the exposed URL for the service:
+
+_http://INGRESSADDRESS:80_
+
 ## Local Development
 These commands allow the container to be built and executed locally.
 ```
