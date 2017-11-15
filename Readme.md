@@ -26,6 +26,12 @@ sudo service bsnstatus start
 
 ### Running in Kubernetes
 
+If you are running in minikube, you will need to enable ingress and stop/start minikube before continuing.
+
+```
+minikube addons enable ingress
+```
+
 Launch the deployment and expose it:
 
 ```
