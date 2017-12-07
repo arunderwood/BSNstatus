@@ -3,26 +3,26 @@
         {
             "SiteName": "BizzaroRouter",
             "SiteDescription": "Firewall",
-            "SiteIcon": "router.png",
+            "SiteIcon": "router.svg",
             "SiteLocator": "https://192.168.100.1:8080",
             "SiteURL": "192.168.100.1:8080"
         },{
             "SiteName": "Webmin",
             "SiteDescription": "System Administration",
-            "SiteIcon": "webmin.png",
+            "SiteIcon": "webmin.svg",
             "SiteLocator": "https://astraeus:10000",
             "SiteURL": "astraeus:10000"
         },{
             "SiteName": "Plex",
             "SiteDescription": "Media Server",
-            "SiteIcon": "plex.png",
+            "SiteIcon": "plex.svg",
             "SiteLocator": "http://astraeus:32400/web/index.html",
             "SiteURL": "astraeus:32400/web/index.html"
         },
         {
             "SiteName": "SABnzbd",
             "SiteDescription": "Binary Newsreader",
-            "SiteIcon": "SABnzbd.png",
+            "SiteIcon": "SABnzbd.svg",
             "SiteLocator": "http://astraeus:6969",
             "SiteURL": "astraeus:6969"
         }, {
@@ -46,13 +46,13 @@
         },{
             "SiteName": "Home-Assistant",
             "SiteDescription": "Home Automation",
-            "SiteIcon": "homeassistant.png",
+            "SiteIcon": "homeassistant.svg",
             "SiteLocator": "http://astraeus:8123",
             "SiteURL": "astraeus:8123"
         },{
             "SiteName": "Ames Weather",
             "SiteDescription": "Ames local forecast",
-            "SiteIcon": "weather.png",
+            "SiteIcon": "weather.svg",
             "SiteLocator": "forecast.io",
             "SiteURL": "<div id=\"weather\"></div>"
         }
