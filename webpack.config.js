@@ -11,8 +11,7 @@ const WebpackPwaManifest = require('webpack-pwa-manifest')
 
 module.exports = {
     entry: {
-        main: './src/bsnStatus.js', // bundle's entry point
-        vendor: './src/vendor.js'
+        main: './src/bsnStatus.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'), // output directory
