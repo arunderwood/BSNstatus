@@ -6,7 +6,8 @@ const extractCSS = new ExtractTextPlugin({ filename: 'css.bundle.css', allChunks
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const OfflinePlugin = require('offline-plugin')
-const ManifestPlugin = require('webpack-manifest-plugin')
+const WebpackPwaManifest = require('webpack-pwa-manifest')
+
 
 module.exports = {
     entry: {
@@ -88,15 +89,45 @@ module.exports = {
             'jQuery': 'jquery',
             'window.jQuery': 'jquery',
             'window.$': 'jquery'
-        }),
+        }), 
         new HtmlWebpackPlugin({
+            favicon: 'src/images/favicon.png',
             template: 'src/index.html',
-            inject : 'head'
+            inject: 'head',
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            }
         }),
-        new ManifestPlugin(),
+        new WebpackPwaManifest({
+            inject: true,
+            fingerprints: false,
+            name: 'BSNstatus',
+            short_name: 'BSNstatus',
+            description: 'A responsive webapp that organizes site bookmarks and other useful data into a grid of cards.',
+            theme_color: '#ff9800',
+            background_color: '#ffffff',
+            orientation: 'portrait',
+            publicPath: '/',
+            display: 'standalone',
+            start_url: '.',
+            author: 'Arunderwood',
+            developer: {
+                name: 'Arunderwood',
+                'url': 'https://github.com/arunderwood'
+            },
+            homepage_url: 'https://github.com/arunderwood/BSNstatus',
+            default_locale: 'en',
+            icons: [
+                {
+                    src: path.resolve('src/images/favicon.png'),
+                    sizes: [96, 128, 144, 192, 256, 384, 512] // multiple sizes
+                }
+            ]
+        }),
         new OfflinePlugin({
             publicPath: '/',
             relativePaths: true,
-        }),
+        })
     ]
 }

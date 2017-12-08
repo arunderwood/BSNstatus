@@ -1,7 +1,7 @@
-require('github-fork-ribbon-css/gh-fork-ribbon.css')
 require('material-design-icons-iconfont/dist/material-design-icons.css')
 require('w3-css/3/w3.css')
 require('./css/styles.css')
+require('github-fork-ribbon-css/gh-fork-ribbon.css')
 require('jquery-lazy')
 
 window.BSNrecords = require('./BSNrecords.json')
