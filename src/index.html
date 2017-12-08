@@ -2,48 +2,13 @@
 <html lang="en-US">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#ff9800">
+<head>
+<link rel="manifest" href="manifest.json">
+</head>
 <title>BSNStatus</title>
 
-<!-- Javascript includes -->
-<script src="https://www.w3schools.com/appml/2.0.3/appml.js"></script>
-<script type="text/javascript">
-if (typeof appml === 'undefined') {
-    document.write(unescape("%3Cscript src='scripts/appml.js' type='text/javascript'%3E%3C/script%3E"));
-}
-</script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript">
-if (typeof jQuery === 'undefined') {
-    document.write(unescape("%3Cscript src='scripts/jquery-3.2.1.min.js' type='text/javascript'%3E%3C/script%3E"));
-}
-</script>
-<script src="scripts/jquery.simpleWeather/jquery.simpleWeather.js"></script>
-<script src="scripts/bsnWeather.js"></script>
-<script src="scripts/bsnStatus.js"></script>
-
-
-<!--CSS Includes -->
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" onerror="loadCSSBackup('css/w3.css')">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" onerror="loadCSSBackup('css/gh-fork-ribbon.min.css')">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" onerror="loadCSSBackup('css/materialIcons.css')">
-<link rel="stylesheet" href="css/W3CSScustomstyles.css">
-
-<!--Load CSS if Offline -->
-<script type="text/javascript">
-    function loadCSSBackup(localURL) {
-        var css = document.createElement("link")
-        css.setAttribute("rel", "stylesheet");
-        css.setAttribute("type", "text/css");
-        css.setAttribute("href", localURL);
-        document.getElementsByTagName("head")[0].appendChild(css);
-    }
-</script>
-
-<!--Favicon Include -->
-<link rel="icon" href="images/favicon.png">
 
 <body>
-
     <!--About BSNStatus button-->
     <div class="w3-container w3-deep-orange w3-xlarge w3-center">
         <button onclick="document.getElementById('aboutBSN').style.display='block'" class="w3-btn">BSNstatus<i class="material-icons">help_outline</i></button>
@@ -94,14 +59,14 @@ if (typeof jQuery === 'undefined') {
 
 
     <!--This is the template for the card-->
-    <div class="w3-row-padding w3-margin-top" appml-data="BSNrecords.js" appml-controller="myFormController">
+    <div class="w3-row-padding w3-margin-top" appml-data="BSNrecords" appml-controller="myFormController">
         <div class="w3-third" appml-repeat="records">
             <a href="{{SiteLocator}}" target="_blank">
                 <div class="w3-card-4 w3-margin-16 w3-white">
                     <header class="w3-container w3-orange w3-row">
 
                         <h3 class="w3-col" style="width:90%">{{SiteName}}</h3>
-                        <img src="images/sitelogos/{{SiteIcon}}" alt="{{SiteIcon}}" class="w3-padding-8 w3-col" style="width:10%">
+                        <img data-src="images/sitelogos/{{SiteIcon}}" class="w3-padding-8 w3-col lazy" style="width:10%">
                     </header>
                     <header class="w3-container w3-purple w3-large BSNdescription">
                         {{SiteDescription}}
@@ -114,28 +79,6 @@ if (typeof jQuery === 'undefined') {
             </a>
         </div>
     </div>
-
-
-    <script>
-        function myFormController($appml) {
-            if ($appml.message == "ready") {}
-            if ($appml.message == "loaded") {}
-            if ($appml.message == "done") {
-                dosimpleWeather();
-            }
-        }
-
-        // Get the modal for the about button
-        var modal = document.getElementById('aboutBSN');
-
-        // When the user clicks anywhere outside of the aboutBSN modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-    </script>
 
 </body>
 

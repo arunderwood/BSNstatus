@@ -5,4 +5,4 @@ services:
     ports:
     - "5050:80"
     volumes:
-    - .:/usr/share/nginx/html
+    - ./dist:/usr/share/nginx/html

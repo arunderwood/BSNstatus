@@ -1,0 +1,48 @@
+{
+  "name": "bsnstatus",
+  "version": "2.0.0",
+  "description": "A responsive webapp that organizes site bookmarks and other useful data into a grid of cards",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p",
+    "build-debug": "webpack -d",
+    "start": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arunderwood/BSNstatus.git"
+  },
+  "author": "Arunderwood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arunderwood/BSNstatus/issues"
+  },
+  "homepage": "https://github.com/arunderwood/BSNstatus#readme",
+  "dependencies": {
+    "appml": "^2.0.31",
+    "github-fork-ribbon-css": "^0.2.1",
+    "jquery": "^3.2.1",
+    "jquery-lazy": "^1.7.7",
+    "material-design-icons": "^3.0.1",
+    "simpleweather": "^3.1.0",
+    "w3-css": "^4.0.4"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.2.3",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.12.1",
+    "eslint-plugin-html": "^4.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "html-minifier": "^3.5.7",
+    "html-webpack-plugin": "^2.30.1",
+    "offline-plugin": "^4.8.5",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.1.2",
+    "webpack": "^3.10.0",
+    "webpack-manifest-plugin": "^1.3.2",
+    "webpack-material-design-icons": "^0.1.0",
+    "webpack-pwa-manifest": "^3.3.2"
+  }
+}
