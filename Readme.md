@@ -1,13 +1,12 @@
 # BSNstatus
 
-A responsive webapp that organizes site bookmarks and other useful data into a grid of cards
+[![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/arunderwood/bsnstatus/)
 
-Availible on [Docker Hub](https://hub.docker.com/r/arunderwood/bsnstatus/).
+A responsive webapp that organizes site bookmarks and other useful data into a grid of cards
 
 ## Offline Functionality
 
-1. External resources such as Jquery, font, and W3CSS will attempt to be loaded from their respective CDNs
-1. If the CDNs are not accessible by the client, they will be loaded directly from the web server
+This app strives to meet the [Progressive Web App Checklist](https://developers.google.com/web/progressive-web-apps/checklist). As such, the app should remain available to your site offline after your first visit.
 
 ## Running
 
@@ -49,8 +48,22 @@ Combine them to get the exposed URL for the service:
 _http://INGRESSADDRESS:80_
 
 ## Local Development
-These commands allow the container to be built and executed locally.
+Built and execute the server locally.
+
 ```
-docker build .
-docker run -p 80:80 [CONTAINER_ID]
+docker-compose up
+```
+
+You can now access the site at http://localhost:5050/
+
+After changing assets you will need to re-webpack them
+
+```
+npm run-script build
+```
+
+OR run webpack in _watch_ mode to rebuild continuously
+
+```
+npm start
 ```
