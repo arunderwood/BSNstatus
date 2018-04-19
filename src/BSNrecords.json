@@ -4,22 +4,22 @@
       "SiteName": "BizzaroRouter",
       "SiteDescription": "Firewall",
       "SiteIcon": "router.svg",
-      "SiteLocator": "https://192.168.100.1:8080",
-      "SiteURL": "192.168.100.1:8080"
+      "SiteLocator": "https://bizzarorouter.bizzarosn.com:8080",
+      "SiteURL": "bizzarorouter.bizzarosn.com:8080"
     },
     {
       "SiteName": "Unifi",
       "SiteDescription": "Ubiquiti Administration",
       "SiteIcon": "ubiquiti.png",
-      "SiteLocator": "https://astraeus.bizzarosn.com:10000",
-      "SiteURL": "astraeus:10000"
+      "SiteLocator": "https://astraeus.bizzarosn.com:8443",
+      "SiteURL": "astraeus:8443"
     },
     {
       "SiteName": "Webmin",
       "SiteDescription": "System Administration",
       "SiteIcon": "webmin.svg",
-      "SiteLocator": "https://astraeus.bizzarosn.com:8443",
-      "SiteURL": "astraeus:8443"
+      "SiteLocator": "https://astraeus.bizzarosn.com:10000",
+      "SiteURL": "astraeus:10000"
     },
     {
       "SiteName": "Plex",
