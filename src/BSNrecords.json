@@ -8,53 +8,67 @@
       "SiteURL": "192.168.100.1:8080"
     },
     {
+      "SiteName": "Unifi",
+      "SiteDescription": "Ubiquiti Administration",
+      "SiteIcon": "ubiquiti.png",
+      "SiteLocator": "https://astraeus.bizzarosn.com:10000",
+      "SiteURL": "astraeus:10000"
+    },
+    {
       "SiteName": "Webmin",
       "SiteDescription": "System Administration",
       "SiteIcon": "webmin.svg",
-      "SiteLocator": "https://astraeus:10000",
-      "SiteURL": "astraeus:10000"
+      "SiteLocator": "https://astraeus.bizzarosn.com:8443",
+      "SiteURL": "astraeus:8443"
     },
     {
       "SiteName": "Plex",
       "SiteDescription": "Media Server",
       "SiteIcon": "plex.svg",
-      "SiteLocator": "http://astraeus:32400/web/index.html",
+      "SiteLocator": "http://astraeus.bizzarosn.com:32400/web/index.html",
       "SiteURL": "astraeus:32400/web/index.html"
     },
     {
       "SiteName": "SABnzbd",
       "SiteDescription": "Binary Newsreader",
       "SiteIcon": "SABnzbd.svg",
-      "SiteLocator": "http://astraeus:6969",
+      "SiteLocator": "http://astraeus.bizzarosn.com:6969",
       "SiteURL": "astraeus:6969"
     },
     {
       "SiteName": "SickRage",
       "SiteDescription": "TV PVR",
       "SiteIcon": "sickrage.png",
-      "SiteLocator": "http://astraeus:8081/home/",
-      "SiteURL": "astraeus:8081"
+      "SiteLocator": "http://astraeus.bizzarosn.com:6970/home/",
+      "SiteURL": "astraeus:6970"
     },
     {
       "SiteName": "CouchPotato",
       "SiteDescription": "Movie PVR",
       "SiteIcon": "couchpotato.png",
-      "SiteLocator": "http://astraeus:6971/home/",
+      "SiteLocator": "http://astraeus.bizzarosn.com:6971/home/",
       "SiteURL": "astraeus:6971"
     },
     {
       "SiteName": "RuTorrent",
       "SiteDescription": "Torrent Client",
       "SiteIcon": "rutorrent.png",
-      "SiteLocator": "http://astraeus:6973",
+      "SiteLocator": "http://astraeus.bizzarosn.com:6973",
       "SiteURL": "astraeus:6973"
     },
     {
       "SiteName": "Home-Assistant",
       "SiteDescription": "Home Automation",
       "SiteIcon": "homeassistant.svg",
-      "SiteLocator": "http://astraeus:8123",
-      "SiteURL": "astraeus:8123"
+      "SiteLocator": "http://hassio.bizzarosn.com:8123",
+      "SiteURL": "hassio:8123"
+    },
+    {
+      "SiteName": "OctoPi",
+      "SiteDescription": "3D Printer Server",
+      "SiteIcon": "homeassistant.svg",
+      "SiteLocator": "http://octopi.local/",
+      "SiteURL": "octopi.local"
     },
     {
       "SiteName": "Ames Weather",
