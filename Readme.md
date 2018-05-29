@@ -54,7 +54,7 @@ Built and execute the server locally.
 docker-compose up
 ```
 
-You can now access the site at http://localhost:5050/
+You can now access the site at http://localhost/
 
 After changing assets you will need to re-webpack them
 

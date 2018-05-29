@@ -6,7 +6,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const OfflinePlugin = require('offline-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 
 module.exports = {
@@ -28,30 +28,30 @@ module.exports = {
             }
         },
         minimizer: [
-        new UglifyJSPlugin({
-            uglifyOptions: {
-                minimize: true,
-                mangle: true,
-                compress: {
-                    warnings: false, // Suppress uglification warnings
-                    pure_getters: true,
-                    unsafe: true,
-                    unsafe_comps: true,
-                    conditionals: true,
-                    unused: true,
-                    comparisons: true,
-                    sequences: true,
-                    dead_code: true,
-                    evaluate: true,
-                    if_return: true,
-                    join_vars: true
-                },
-                output: {
-                    comments: false,
-                },
-            }
-        }),
-    ]
+            new UglifyJSPlugin({
+                uglifyOptions: {
+                    minimize: true,
+                    mangle: true,
+                    compress: {
+                        warnings: false, // Suppress uglification warnings
+                        pure_getters: true,
+                        unsafe: true,
+                        unsafe_comps: true,
+                        conditionals: true,
+                        unused: true,
+                        comparisons: true,
+                        sequences: true,
+                        dead_code: true,
+                        evaluate: true,
+                        if_return: true,
+                        join_vars: true
+                    },
+                    output: {
+                        comments: false,
+                    },
+                }
+            }),
+        ]
     },
     module: {
         rules: [
@@ -67,8 +67,8 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                  MiniCssExtractPlugin.loader,
-                  "css-loader"
+                    MiniCssExtractPlugin.loader,
+                    'css-loader'
                 ]
             }
         ]
@@ -79,10 +79,10 @@ module.exports = {
             { from: 'src/images', to: 'images' }
         ]),
         new MiniCssExtractPlugin({
-          // Options similar to the same options in webpackOptions.output
-          // both options are optional
-          filename: "[name].css",
-          chunkFilename: "[id].css"
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: '[name].css',
+            chunkFilename: '[id].css'
         }),
         new OptimizeCssAssetsPlugin({
             cssProcessor: require('cssnano'),
