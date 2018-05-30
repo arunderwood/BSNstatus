@@ -6,7 +6,7 @@ A responsive webapp that organizes site bookmarks and other useful data into a g
 
 ## Offline Functionality
 
-This app strives to meet the [Progressive Web App Checklist](https://developers.google.com/web/progressive-web-apps/checklist). As such, the app should remain available to your site offline after your first visit.
+This app strives to meet the [Progressive Web App Checklist](https://developers.google.com/web/progressive-web-apps/checklist). As such, the app should remain available on your device when it is offline after your first visit.
 
 ## Running
 
