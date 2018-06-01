@@ -67,8 +67,8 @@
       "SiteName": "OctoPi",
       "SiteDescription": "3D Print Server",
       "SiteIcon": "octopi.svg",
-      "SiteLocator": "http://192.168.100.96/",
-      "SiteURL": "octopi:80"
+      "SiteLocator": "http://octopi.bizzarosn.com/",
+      "SiteURL": "octopi.bizzarosn.com"
     },
     {
       "SiteName": "Ames Weather",
