@@ -107,6 +107,7 @@ module.exports = {
         new WebpackPwaManifest({
             inject: true,
             fingerprints: false,
+            filename: 'manifest.json',
             name: 'BSNstatus',
             short_name: 'BSNstatus',
             description: 'A responsive webapp that organizes site bookmarks and other useful data into a grid of cards.',
