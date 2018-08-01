@@ -66,7 +66,7 @@
     {
       "SiteName": "OctoPi",
       "SiteDescription": "3D Print Server",
-      "SiteIcon": "octopi.svg",
+      "SiteIcon": "octoprint.png",
       "SiteLocator": "http://octopi.bizzarosn.com/",
       "SiteURL": "octopi.bizzarosn.com"
     },
