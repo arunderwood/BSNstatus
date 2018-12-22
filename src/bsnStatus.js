@@ -14,8 +14,8 @@ window.loadColorpicker = function loadColorpicker() {
 
 function dosimpleWeather() {
     $.simpleWeather({
-        location: 'Ames, IA',
-        woeid: '',
+        location: '',
+        woeid: '2354286',
         unit: 'f',
         success: function (weather) {
             var html = '<p>' + weather.temp + '&deg;' + weather.units.temp + '</p>'
