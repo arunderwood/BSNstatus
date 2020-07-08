@@ -32,8 +32,8 @@ module.exports = {
                 uglifyOptions: {
                     minimize: true,
                     mangle: true,
+                    warnings: false, // Suppress uglification warnings
                     compress: {
-                        warnings: false, // Suppress uglification warnings
                         pure_getters: true,
                         unsafe: true,
                         unsafe_comps: true,
@@ -74,10 +74,11 @@ module.exports = {
         ]
     },
     plugins : [
-        new CopyWebpackPlugin([
-            // {output}/to/file.txt
-            { from: 'src/images', to: 'images' }
-        ]),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'src/images', to: 'images' },
+            ],
+        }),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
