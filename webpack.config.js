@@ -74,10 +74,11 @@ module.exports = {
         ]
     },
     plugins : [
-        new CopyWebpackPlugin([
-            // {output}/to/file.txt
-            { from: 'src/images', to: 'images' }
-        ]),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'src/images', to: 'images' },
+            ],
+        }),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
