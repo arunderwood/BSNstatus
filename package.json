@@ -45,6 +45,6 @@
     "webpack-cli": "^3.3.12",
     "webpack-manifest-plugin": "^2.2.0",
     "webpack-material-design-icons": "^0.1.0",
-    "webpack-pwa-manifest": "^4.2.0"
+    "webpack-pwa-manifest": "^4.3.0"
   }
 }
