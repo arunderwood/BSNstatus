@@ -4,8 +4,7 @@
   "description": "A responsive webapp that organizes site bookmarks and other useful data into a grid of cards",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -p",
-    "build-debug": "webpack -d",
+    "build": "webpack",
     "start": "webpack --watch"
   },
   "repository": {
