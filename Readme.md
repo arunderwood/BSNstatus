@@ -1,7 +1,6 @@
 # BSNstatus
 
 [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/arunderwood/bsnstatus/)
-[![Build Status](https://travis-ci.org/arunderwood/BSNstatus.svg?branch=master)](https://travis-ci.org/arunderwood/BSNstatus)
 
 A responsive webapp that organizes site bookmarks and other useful data into a grid of cards
 
