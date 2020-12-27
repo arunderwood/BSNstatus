@@ -1,4 +1,4 @@
-FROM node:10 as BUILD
+FROM node:14 as BUILD
 WORKDIR /build
 
 COPY package-lock.json package.json ./
