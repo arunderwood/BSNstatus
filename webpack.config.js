@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const OfflinePlugin = require('offline-plugin')
+const WorkboxPlugin = require('workbox-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -53,6 +53,7 @@ module.exports = {
             }),
         ]
     },
+    mode: 'production',
     module: {
         rules: [
             {
@@ -132,12 +133,11 @@ module.exports = {
                 }
             ]
         }),
-        new OfflinePlugin({
-            publicPath: '/',
-            relativePaths: true,
-            ServiceWorker: {
-                minify: false
-            }
-        })
+        new WorkboxPlugin.GenerateSW({
+            // these options encourage the ServiceWorkers to get in there fast
+            // and not allow any straggling "old" SWs to hang around
+            clientsClaim: true,
+            skipWaiting: true,
+        }),
     ]
 }
