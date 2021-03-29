@@ -30,7 +30,7 @@
   "devDependencies": {
     "copy-webpack-plugin": "^7.0.0",
     "css-loader": "^5.0.1",
-    "eslint": "^7.4.0",
+    "eslint": "^7.23.0",
     "eslint-plugin-html": "^6.0.2",
     "file-loader": "^6.0.0",
     "html-minifier": "^4.0.0",
