@@ -7,12 +7,12 @@ COPY . ./
 RUN npm run-script build
 
 
-FROM nginx:alpine as SERVE
+FROM nginx:alpine as serve
 
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY --from=BUILD /build/dist /usr/share/nginx/html
 
 
-FROM SERVE as VALIDATE_NGINX
+FROM serve as VALIDATE_NGINX
 # Check Nginx config syntax
 RUN /usr/sbin/nginx -t -c /etc/nginx/nginx.conf
