@@ -9,8 +9,6 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
 
-
-
 module.exports = {
     entry: {
         main: './src/bsnStatus.js'
@@ -30,7 +28,6 @@ module.exports = {
             }
         },
         minimizer: [
-            // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
             new TerserPlugin(),
             new CssMinimizerPlugin(),
         ],
@@ -40,18 +37,13 @@ module.exports = {
         rules: [
             {
                 test: /\.jpe?g$|\.gif$|\.png$|\.ttf$|\.eot$|\.svg$|\.woff|woff2$/,
-                use: [{
-                    loader: 'file-loader?name=[name].[ext]?[hash]',
-                    options: {
-                        publicPath: '/'
-                    }
-                }]
+                type: 'asset/resource'
             },
             {
                 test: /\.css$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'style-loader', 'css-loader'
+                    'css-loader'
                 ]
             }
         ]
@@ -68,7 +60,6 @@ module.exports = {
             filename: '[name].css',
             chunkFilename: '[id].css'
         }),
-        new MiniCssExtractPlugin(),
         new webpack.ProvidePlugin({
             $: 'jquery',
             'jQuery': 'jquery',
@@ -78,11 +69,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             favicon: 'src/images/favicon.png',
             template: 'src/index.html',
-            inject: 'head',
-            minify: {
-                collapseWhitespace: true,
-                removeComments: true
-            }
+            inject: true,
+            minify: true
         }),
         new WebpackPwaManifest({
             inject: true,

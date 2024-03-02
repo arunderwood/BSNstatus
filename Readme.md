@@ -48,7 +48,7 @@ Combine them to get the exposed URL for the service:
 _http://INGRESSADDRESS:80_
 
 ## Local Development
-Built and execute the server locally.
+Built and execute the full nginx docker server locally.
 
 ```
 docker-compose up
@@ -59,11 +59,11 @@ You can now access the site at http://localhost/
 After changing assets you will need to re-webpack them
 
 ```
-npm run-script build
+npm run build
 ```
 
 OR run webpack in _watch_ mode to rebuild continuously
 
 ```
-npm start
+npm run serve
 ```
