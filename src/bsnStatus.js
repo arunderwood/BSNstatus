@@ -1,11 +1,13 @@
-require('material-design-icons-iconfont/dist/material-design-icons.css')
-require('w3-css/3/w3.css')
-require('./css/styles.css')
-require('github-fork-ribbon-css/gh-fork-ribbon.css')
-require('jquery-lazy')
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import 'w3-css/3/w3.css'
+import './css/styles.css'
+import 'github-fork-ribbon-css/gh-fork-ribbon.css'
+import 'jquery-lazy'
+import 'simpleweather'
+import 'appml'
 
-window.BSNrecords = require('./BSNrecords.json')
-require('simpleweather')
+import BSNrecords from './BSNrecords.json'
+window.BSNrecords = BSNrecords;
 
 window.loadColorpicker = function loadColorpicker() {
     var newcolor = document.getElementById('inputColor').value
@@ -38,7 +40,6 @@ window.myFormController = function myFormController($appml) {
         dosimpleWeather()
     }
 }
-require('appml')
 
 // Get the modal for the about button
 var modal = document.getElementById('aboutBSN')
