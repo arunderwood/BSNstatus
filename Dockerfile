@@ -4,7 +4,7 @@ WORKDIR /build
 COPY package-lock.json package.json ./
 RUN npm install
 COPY . ./
-RUN npm run-script build
+RUN npm run build
 
 
 FROM nginx:alpine as serve
