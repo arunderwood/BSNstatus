@@ -2,11 +2,13 @@ const path = require('path')
 const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const WorkboxPlugin = require('workbox-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
+
+
 
 
 module.exports = {
@@ -28,30 +30,10 @@ module.exports = {
             }
         },
         minimizer: [
-            new UglifyJSPlugin({
-                uglifyOptions: {
-                    minimize: true,
-                    mangle: true,
-                    warnings: false, // Suppress uglification warnings
-                    compress: {
-                        pure_getters: true,
-                        unsafe: true,
-                        unsafe_comps: true,
-                        conditionals: true,
-                        unused: true,
-                        comparisons: true,
-                        sequences: true,
-                        dead_code: true,
-                        evaluate: true,
-                        if_return: true,
-                        join_vars: true
-                    },
-                    output: {
-                        comments: false,
-                    },
-                }
-            }),
-        ]
+            // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+            new TerserPlugin(),
+            new CssMinimizerPlugin(),
+        ],
     },
     mode: 'production',
     module: {
@@ -86,11 +68,7 @@ module.exports = {
             filename: '[name].css',
             chunkFilename: '[id].css'
         }),
-        new OptimizeCssAssetsPlugin({
-            cssProcessor: require('cssnano'),
-            cssProcessorOptions: { discardComments: { removeAll: true } },
-            canPrint: true
-        }),
+        new MiniCssExtractPlugin(),
         new webpack.ProvidePlugin({
             $: 'jquery',
             'jQuery': 'jquery',
