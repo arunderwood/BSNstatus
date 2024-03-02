@@ -1,10 +1,10 @@
-FROM node:14 as BUILD
+FROM node:20 as BUILD
 WORKDIR /build
 
 COPY package-lock.json package.json ./
 RUN npm install
 COPY . ./
-RUN npm run-script build
+RUN npm run build
 
 
 FROM nginx:alpine as serve
