@@ -1,4 +1,4 @@
-name: Build and Lint
+name: Validate and Build
 
 on:
   push:
@@ -7,56 +7,46 @@ on:
     branches: [ "main" ]
 
 jobs:
-  setup:
+  install-dependencies:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.2
         with:
           node-version: 20
           cache: 'npm'
-
       - run: npm install
 
   build:
-    needs: setup
+    needs: install-dependencies
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      # Reuse the cache setup for node_modules
-      - name: Cache node modules
-        uses: actions/cache@v3
+      - name: Setup Node.js environment (for cache)
+        uses: actions/setup-node@v4.0.2
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-
+          node-version: 20
+          cache: 'npm'
       - run: npm run build
 
   eslint:
-    needs: setup
+    needs: install-dependencies
     runs-on: ubuntu-latest
     permissions:
       contents: read
       security-events: write
     steps:
       - uses: actions/checkout@v4
-      
-      # Reuse the cache setup for node_modules
-      - name: Cache node modules
-        uses: actions/cache@v3
+      - name: Setup Node.js environment (for cache)
+        uses: actions/setup-node@v4.0.2
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-
-      - name: Run ESLint
-        run: npx eslint . --config .eslintrc.js --ext .js,.jsx,.ts,.tsx --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif
+          node-version: 20
+          cache: 'npm'
+      - run: npx eslint . --config .eslintrc.js --ext .js,.jsx,.ts,.tsx --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif
         continue-on-error: true
-
       - name: Upload analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: eslint-results.sarif
           wait-for-processing: true
