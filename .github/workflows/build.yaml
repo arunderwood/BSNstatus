@@ -23,11 +23,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: ls -lha
       - name: Setup Node.js environment (for cache)
         uses: actions/setup-node@v4.0.2
         with:
           node-version: 20
           cache: 'npm'
+      - run: ls -lha
       - run: npm run build
 
   eslint:
@@ -43,6 +45,7 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
+      - run: ls -lha
       - run: npx eslint . --config .eslintrc.js --ext .js,.jsx,.ts,.tsx --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif
         continue-on-error: true
       - name: Upload analysis results to GitHub
