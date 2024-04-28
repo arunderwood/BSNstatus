@@ -18,6 +18,7 @@
     "url": "https://github.com/arunderwood/BSNstatus/issues"
   },
   "homepage": "https://github.com/arunderwood/BSNstatus#readme",
+  "type": "module",
   "dependencies": {
     "appml": "^2.0.31",
     "github-fork-ribbon-css": "^0.2.3",
