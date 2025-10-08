@@ -1,4 +1,6 @@
 name: Build Assets
+permissions:
+  contents: read
 on: [push]
 
 jobs:
